@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet">
+    <title>Gaurav Sharan Kumar</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./assests/favicon.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assests/favicon.svg">
+</head>
+
+<body class="bg-[#0f0f0f] min-h-screen text-white">
+    <header class="w-full h-[16vh] flex min-h-[60px] md:min-h-[95px]">
+        <div class="w-[90%] h-[80%] m-auto flex justify-between items-center sm:w-[40%] md:w-[45%] lg:w-[50%] ml-[5%]">
+            <div
+                class="font-['Metal-Mania'] font-bold text-3xl underline decoration-white/60 hover:decoration-white/90">
+                GSK
+            </div>
+            <div onclick="toggle()"
+                class="cursor-pointer font-bold text-4xl hover:opacity-50 relative bottom-[20%] sm:hidden">
+                ≡
+            </div>
+            <div id="mobile-menu"
+                class="hidden sm:hidden fixed top-[max(30px,8vh)] right-[4%] w-auto h-auto bg-[#0f0f0f] flex flex-col justify-center items-center gap-3">
+                <a href="#" class="hover:opacity-70">HOME</a>
+                <a href="#" class="hover:opacity-70">ABOUT</a>
+                <a href="#" class="hover:opacity-70">WORKS</a>
+                <a href="#"><button class="bg-black font-semibold p-2 text-white rounded-full">CONTACT ME</button></a>
+            </div>
+        </div>
+
+        <nav class="hidden sm:block sm:w-[60%] md:w-[55%] lg:w-[50%] bg-white h-[100%]">
+            <div
+                class="h-[60%] mt-[3%] flex justify-between text-black gap-8 items-center md:text-base xl:text-lg ml-[10%] mr-[10%] xl:ml-[15%] sm:ml-[5%] sm:mr-[5%] sm:text-sm">
+                <div class="flex justify-center gap-5 items-center font-normal lg:gap-10 ">
+                    <a href="#" class="hover:opacity-70">HOME</a>
+                    <a href="#" class="hover:opacity-70">ABOUT</a>
+                    <a href="#" class="hover:opacity-70">WORKS</a>
+                </div>
+                <button
+                    class="bg-black p-3 font-medium xl:font-semibold text-white rounded-full xl:hidden">CONTACT</button>
+                <button
+                    class="bg-black p-3 font-medium xl:font-semibold text-white rounded-full hidden xl:block">CONTACT
+                    ME</button>
+            </div>
+        </nav>
+    </header>
+
+    <div id="hero" class="w-[90%] h-[84vh] m-auto flex justify-between min-h-[525px]">
+        <div id="hero-texts" class="w-full md:w-[60%] flex flex-col justify-center gap-auto m-auto mx-0">
+            <div class="text-white font-bold text-5xl lg:text-6xl xl:text-7xl font-['Metal-Mania']">
+                Designing the Future of Digital Technology
+            </div>
+            <br>
+            <div class="text-white text-lg sm:text-2xl lg:text-3xl text-left mt-4">
+                Hello! I am<b> Gaurav Sharan Kumar</b>.
+            </div>
+            <br>
+            <div class=" text-xl sm:text-2xl">
+                I am a front end developer with a passion for creating beautiful, functional, and user-friendly
+                websites.
+            </div>
+            <div class="flex flex-col gap-30 items-center m-auto">
+                <a href="#"><button class="bg-white text-black px-6 py-2 rounded-full mt-6">see my
+                        works</button></a><br>
+                <a href="#" class="text-white underline mt-4 inline-block">learn more about me</a>
+            </div>
+        </div>
+        <div id="hero-rectangles" class="hidden md:block md:w-[40%] m-auto">
+            <div
+                class="lg:w-[25%] h-[400px] md:w-[30%] bg-white border border-grey/90 border-4 rounded-3xl absolute right-[8%] top-[140px] lg:top-[160px] lg:right-[10%] backdrop-blur-sm">
+            </div>
+            <div
+                class="lg:w-[25%] h-[400px] md:w-[30%] bg-white rounded-3xl shadow-4xl border border-grey border-4 absolute right-[4%] top-[180px] lg:top-[200px] lg:right-[6%] backdrop-blur-sm">
+            </div>
+            <div class="flex gap-2 px-4 py-3 border-b border-black/10">
+                <span
+                    class="w-[20px] h-[20px] rounded-full bg-red-400 top-[195px] lg:top-[215px] right-[30%] lg:right-[28%] absolute"></span>
+                <span
+                    class="w-[20px] h-[20px] rounded-full bg-yellow-400 top-[195px] lg:top-[215px] right-[25%] lg:right-[23%] absolute"></span>
+                <span
+                    class="w-[20px] h-[20px] rounded-full bg-green-400 top-[195px] lg:top-[215px] right-[20%] lg:right-[18%] absolute"></span>
+            </div>
+        </div>
+    </div>
+
+    <section id="about"
+        class="w-[90%] m-auto flex flex-col md:flex-row gap-20 items-center my-20 justify-between min-h-[400px]">
+        <div class="lg:w-[65%] md:w-[60%]">
+            <h1 class="text-3xl font-bold text-white underline">About Me</h1>
+            <div class="mt-4">
+                <p class="text-lg lg:text-xl text-justify leading-7">
+                    I am <b>Gaurav Sharan Kumar</b>, a passionate front-end developer with a knack for creating visually
+                    stunning
+                    and user-friendly websites. With a strong foundation in HTML, CSS, and JavaScript, I specialize in
+                    crafting responsive designs that adapt seamlessly across devices. My expertise extends to popular
+                    frameworks like React.js and Tailwind CSS, allowing me to build dynamic web applications that
+                    deliver
+                    exceptional user experiences. I thrive on collaboration and am always eager to take on new
+                    challenges
+                    that push the boundaries of web development. Let's work together to bring your digital visions to
+                    life!
+                </p>
+                <br>
+                <p class="text-lg lg:text-xl text-justify leading-7">
+                    <b>Regarding my educational background</b>, I am currently studying Bachelor of Engineering in
+                    Computer Science
+                    from Advanced College of Engineering and Management, Kalanki, Kathmandu, Nepal. It is affiliated to
+                    Tribhuvan University. I have secured an impressive Rank-9 in IOE entrance examination. I have
+                    completed
+                    my higher secondary education (10+2) or (SLC) from Capital College of Research Centre, Kathmandu,
+                    Nepal
+                    with a GPA of 3.95 in science stream. Prior to that, I completed my Secondary Education Examination
+                    (SEE
+                    or Grade-10) from Paribodh Boarding School, Lalitpur, Nepal with a GPA of 3.90.
+                </p>
+            </div>
+        </div>
+        <div class="
+        ">
+            <img src="gsk.jpg" alt="photo"
+                class="w-[300px] h-[300px] lg:w-[350px] lg:h-[350px] rounded-3xl md:mt-0 lg:mt-6">
+        </div>
+    </section>
+</body>
+<script>
+    function toggle() {
+        const menu = document.getElementById('mobile-menu');
+        if (menu.classList.contains('hidden')) {
+            menu.classList.remove('hidden');
+        } else {
+            menu.classList.add('hidden');
+        }
+    }
+</script>
+
+</html>
