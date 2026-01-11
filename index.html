@@ -7,214 +7,197 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet">
     <title>Gaurav Sharan Sah</title>
-    <!-- <link rel="icon" href="/favicon.jpg" type="image/png">-->
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon.svg">
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon.svg">
-
 </head>
 
 <body class="bg-[#0f0f0f] min-h-screen text-white">
-    <header id="home" class="w-full h-[16vh] flex min-h-[60px] md:min-h-[95px]">
-        <div class="w-[90%] h-[80%] m-auto flex justify-between items-center sm:w-[40%] md:w-[45%] lg:w-[50%] ml-[5%]">
-            <div
-                class="font-['Metal-Mania'] font-bold text-3xl underline decoration-white/60 hover:decoration-white/90">
-                Gaurav
-            </div>
-            <div onclick="toggle()"
-                class="cursor-pointer font-bold text-4xl hover:opacity-50 relative bottom-[20%] sm:hidden">
-                ≡
-            </div>
-            <div id="mobile-menu"
-                class="hidden sm:hidden fixed top-[max(30px,8vh)] right-[4%] w-auto h-auto bg-[#0f0f0f] flex flex-col justify-center items-center gap-3">
-                <a href="#home" class="hover:opacity-70">HOME</a>
-                <a href="#about" class="hover:opacity-70">ABOUT</a>
-                <a href="#works" class="hover:opacity-70">WORKS</a>
-                <a href="#contact"><button class="bg-black font-semibold p-2 text-white rounded-full">CONTACT
-                        ME</button></a>
-            </div>
-        </div>
-
-        <nav class="hidden sm:block sm:w-[60%] md:w-[55%] lg:w-[50%] bg-white h-[100%]">
-            <div
-                class="h-[60%] mt-[3%] flex justify-between text-black gap-8 items-center md:text-base xl:text-lg ml-[10%] mr-[10%] xl:ml-[15%] sm:ml-[5%] sm:mr-[5%] sm:text-sm">
-                <div class="flex justify-center gap-5 items-center font-normal lg:gap-10 ">
-                    <a href="#home" class="hover:opacity-70">HOME</a>
-                    <a href="#about" class="hover:opacity-70">ABOUT</a>
-                    <a href="#works" class="hover:opacity-70">WORKS</a>
+    <header id="home" class="w-full h-auto min-h-[60px] md:min-h-[95px] py-3 md:py-0">
+        <div class="w-full h-full flex flex-col sm:flex-row">
+            <!-- Left section with logo and hamburger -->
+            <div class="w-full sm:w-[40%] md:w-[45%] lg:w-[50%] px-[5%] flex justify-between items-center h-[60px] md:h-[95px]">
+                <div class="font-['Metal-Mania'] font-bold text-2xl sm:text-3xl underline decoration-white/60 hover:decoration-white/90">
+                    Gaurav
                 </div>
-                <a href="#contact"><button
-                        class="bg-black p-3 font-medium xl:font-semibold text-white rounded-full xl:hidden">CONTACT</button></a>
-                <a href="#contact"><button
-                        class="bg-black p-3 font-medium xl:font-semibold text-white rounded-full hidden xl:block">CONTACT
-                        ME</button></a>
+                <div onclick="toggle()" class="cursor-pointer font-bold text-3xl sm:text-4xl hover:opacity-50 sm:hidden">
+                    ≡
+                </div>
             </div>
-        </nav>
+
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="hidden sm:hidden w-full bg-[#0f0f0f] flex flex-col justify-center items-center gap-3 py-4 border-t border-white/20">
+                <a href="#home" class="hover:opacity-70 text-base">HOME</a>
+                <a href="#about" class="hover:opacity-70 text-base">ABOUT</a>
+                <a href="#works" class="hover:opacity-70 text-base">WORKS</a>
+                <a href="#contact"><button class="bg-black font-semibold px-4 py-2 text-white rounded-full text-base">CONTACT ME</button></a>
+            </div>
+
+            <!-- Desktop navigation -->
+            <nav class="hidden sm:flex sm:w-[60%] md:w-[55%] lg:w-[50%] bg-white h-[60px] md:h-[95px] items-center">
+                <div class="w-full h-full flex justify-between items-center px-[5%] md:px-[10%] xl:px-[15%]">
+                    <div class="flex justify-center gap-3 lg:gap-5 xl:gap-10 items-center font-normal text-black text-sm md:text-base xl:text-lg">
+                        <a href="#home" class="hover:opacity-70 whitespace-nowrap">HOME</a>
+                        <a href="#about" class="hover:opacity-70 whitespace-nowrap">ABOUT</a>
+                        <a href="#works" class="hover:opacity-70 whitespace-nowrap">WORKS</a>
+                    </div>
+                    <a href="#contact" class="whitespace-nowrap">
+                        <button class="bg-black px-3 py-2 md:px-4 md:py-3 font-medium xl:font-semibold text-white rounded-full text-sm md:text-base">
+                            <span class="hidden xl:inline">CONTACT ME</span>
+                            <span class="xl:hidden">CONTACT</span>
+                        </button>
+                    </a>
+                </div>
+            </nav>
+        </div>
     </header>
 
-    <div id="hero" class="w-[90%] m-auto flex justify-between my-5 sm:gap-auto">
-        <div id="hero-texts" class="w-full md:w-[50%] flex flex-col justify-center mx-0 items-left">
-            <div class="text-white font-bold text-5xl md:text-6xl xl:text-7xl font-['Metal-Mania'] my-5">
+    <div id="hero" class="w-[90%] max-w-[1400px] m-auto flex flex-col md:flex-row justify-between my-5 md:my-10 gap-8 md:gap-0">
+        <div id="hero-texts" class="w-full md:w-[50%] lg:w-[55%] flex flex-col justify-center">
+            <div class="text-white font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-['Metal-Mania'] my-3 md:my-5 leading-tight">
                 Designing the Future of Digital Technology
             </div>
-            <div class="text-white text-xl md:text-2xl xl:text-3xl text-left my-5">
+            <div class="text-white text-lg sm:text-xl md:text-2xl xl:text-3xl text-left my-3 md:my-5">
                 Hello! I am<b> Gaurav Sharan Sah</b>.
             </div>
-            <div class=" text-xl md:text-2xl xl:text-3xl my-5 text-justify">
-                I am a front end developer with a passion for creating beautiful, functional, and user-friendly
-                websites.
+            <div class="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl my-3 md:my-5 text-justify leading-relaxed">
+                I am a front end developer with a passion for creating beautiful, functional, and user-friendly websites.
             </div>
-            <div class="grid grid-cols-1 gap-15 items-center m-auto">
-                <a href="#works"><button class="bg-white text-black px-6 py-2 rounded-full my-5">see my
-                        works</button></a><br>
-                <a href="#about" class="text-white underline mb-5 inline-block">learn more about me</a>
+            <div class="flex flex-col items-center gap-3 my-3 md:my-5">
+                <a href="#works">
+                    <button class="bg-white text-black px-6 py-2 md:px-8 md:py-3 rounded-full text-base md:text-lg hover:opacity-90 transition">
+                        see my works
+                    </button>
+                </a>
+                <a href="#about" class="text-white underline text-base md:text-lg hover:opacity-70 transition">
+                    learn more about me
+                </a>
             </div>
         </div>
-        <div id="hero-rectangles" class="hidden md:block md:w-[50%] mr-0">
-            <div
-                class="md:w-[36%] h-[400px] bg-white border border-grey/90 border-4 rounded-3xl absolute right-[8%] top-[140px] backdrop-blur-sm">
-            </div>
-            <div
-                class="md:w-[36%] h-[400px] bg-white border border-grey border-4 rounded-3xl shadow-4xl absolute right-[4%] top-[180px] backdrop-blur-sm">
-            </div>
-            <div class="flex gap-2 px-4 py-3 border-b border-black/10">
-                <span
-                    class="w-[20px] h-[20px] rounded-full bg-red-400 top-[195px] lg:top-[215px] right-[30%] lg:right-[28%] absolute"></span>
-                <span
-                    class="w-[20px] h-[20px] rounded-full bg-yellow-400 top-[195px] lg:top-[215px] right-[25%] lg:right-[23%] absolute"></span>
-                <span
-                    class="w-[20px] h-[20px] rounded-full bg-green-400 top-[195px] lg:top-[215px] right-[20%] lg:right-[18%] absolute"></span>
+
+        <div id="hero-rectangles" class="hidden md:block md:w-[45%] lg:w-[40%] relative min-h-[400px] lg:min-h-[500px]">
+            <div class="w-[85%] lg:w-[75%] xl:w-[70%] h-[350px] lg:h-[400px] bg-white border-4 border-grey/90 rounded-3xl absolute right-[15%] lg:right-[20%] top-0 backdrop-blur-sm"></div>
+            <div class="w-[85%] lg:w-[75%] xl:w-[70%] h-[350px] lg:h-[400px] bg-white border-4 border-grey rounded-3xl shadow-4xl absolute right-[5%] lg:right-[10%] top-[40px] backdrop-blur-sm"></div>
+            <div class="flex gap-2 px-4 py-3 absolute top-[55px] right-[5%] lg:right-[10%] z-10">
+                <span class="w-4 h-4 lg:w-5 lg:h-5 rounded-full bg-red-400"></span>
+                <span class="w-4 h-4 lg:w-5 lg:h-5 rounded-full bg-yellow-400"></span>
+                <span class="w-4 h-4 lg:w-5 lg:h-5 rounded-full bg-green-400"></span>
             </div>
         </div>
     </div>
 
-    <section id="about" class="w-[90%] m-auto">
-
-        <div class="flex justify-center m-auto my-5">
-            <img src="./assets/gsk.jpg" alt="photo" class="items-center  h-auto lg:w-[300px] lg:h-[300px] rounded-full">
+    <section id="about" class="w-[90%] max-w-[1400px] m-auto py-8 md:py-12">
+        <div class="flex justify-center m-auto my-5 md:my-8">
+            <img src="./assets/gsk.jpg" alt="photo" class="w-[200px] h-[200px] sm:w-[250px] sm:h-[250px] lg:w-[300px] lg:h-[300px] rounded-full object-cover">
         </div>
-        <h1 class="text-3xl font-bold text-white underline text-center my-5">About Me</h1>
-        <div class="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-20 my-5">
-            <div class="text-lg lg:text-xl text-justify leading-7">
-                I am <b>Gaurav Sharan Sah</b>, a passionate front-end developer with a knack for creating visually
-                stunning
-                and user-friendly websites. With a strong foundation in HTML, CSS, and JavaScript, I specialize in
-                crafting responsive designs that adapt seamlessly across devices. My expertise extends to popular
-                frameworks like React.js and Tailwind CSS, allowing me to build dynamic web applications that
-                deliver
-                exceptional user experiences. I thrive on collaboration and am always eager to take on new
-                challenges
-                that push the boundaries of web development. Let's work together to bring your digital visions to
-                life!
+        <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white underline text-center my-5 md:my-8">About Me</h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 lg:gap-20 my-5 md:my-8">
+            <div class="text-base sm:text-lg lg:text-xl text-justify leading-6 sm:leading-7 lg:leading-8">
+                I am <b>Gaurav Sharan Sah</b>, a passionate front-end developer with a knack for creating visually stunning and user-friendly websites. With a strong foundation in HTML, CSS, and JavaScript, I specialize in crafting responsive designs that adapt seamlessly across devices. My expertise extends to popular frameworks like React.js and Tailwind CSS, allowing me to build dynamic web applications that deliver exceptional user experiences. I thrive on collaboration and am always eager to take on new challenges that push the boundaries of web development. Let's work together to bring your digital visions to life!
             </div>
-            <div class="text-lg lg:text-xl text-justify leading-7">
-                <b>Regarding my educational background</b>, I am currently studying Bachelor of Engineering in
-                Computer Science
-                from Advanced College of Engineering and Management, Kalanki, Kathmandu, Nepal. It is affiliated to
-                Tribhuvan University. I have secured an impressive Rank-9 in IOE entrance examination. I have
-                completed
-                my higher secondary education (10+2) or (SLC) from Capital College of Research Centre, Kathmandu,
-                Nepal
-                with a GPA of 3.95 in science stream. Prior to that, I completed my Secondary Education Examination
-                (SEE
-                or Grade-10) from Paribodh Boarding School, Lalitpur, Nepal with a GPA of 3.90.
+            <div class="text-base sm:text-lg lg:text-xl text-justify leading-6 sm:leading-7 lg:leading-8">
+                <b>Regarding my educational background</b>, I am currently studying Bachelor of Engineering in Computer Science from Advanced College of Engineering and Management, Kalanki, Kathmandu, Nepal. It is affiliated to Tribhuvan University. I have secured an impressive Rank-9 in IOE entrance examination. I have completed my higher secondary education (10+2) or (SLC) from Capital College of Research Centre, Kathmandu, Nepal with a GPA of 3.95 in science stream. Prior to that, I completed my Secondary Education Examination (SEE or Grade-10) from Paribodh Boarding School, Lalitpur, Nepal with a GPA of 3.90.
             </div>
         </div>
     </section>
 
-    <section id="skills" class="w-[90%] m-auto my-10">
-        <h1 class="text-3xl font-bold text-white underline text-center my-5">Skills</h1>
-        <div class="grid grid-cols-1 gap-auto sm:grid-cols-2 md:grid-cols-4 my-5">
-            <div>
-                <div class="my-5 items-center flex justify-center"><img src="./assets/HTML-5.png" alt=""
-                        class="w-auto h-[150px] "></div>
-                <div class="text-center font-bold my-5">HTML 5</div>
+    <section id="skills" class="w-[90%] max-w-[1400px] m-auto py-8 md:py-12">
+        <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white underline text-center my-5 md:my-8">Skills</h1>
+        <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 lg:gap-10 my-5 md:my-8">
+            <div class="flex flex-col items-center">
+                <div class="my-3 md:my-5 flex justify-center items-center h-[100px] sm:h-[120px] md:h-[150px]">
+                    <img src="./assets/HTML-5.png" alt="HTML 5" class="w-auto h-full object-contain">
+                </div>
+                <div class="text-center font-bold text-sm sm:text-base md:text-lg">HTML 5</div>
             </div>
-            <div>
-                <div class="my-5 items-center flex justify-center"><img src="./assets/Tailwind_CSS.png" alt=""
-                        class="w-auto h-[150px] "></div>
-                <div class="text-center font-bold my-5">Tailwind CSS</div>
+            <div class="flex flex-col items-center">
+                <div class="my-3 md:my-5 flex justify-center items-center h-[100px] sm:h-[120px] md:h-[150px]">
+                    <img src="./assets/Tailwind_CSS.png" alt="Tailwind CSS" class="w-auto h-full object-contain">
+                </div>
+                <div class="text-center font-bold text-sm sm:text-base md:text-lg">Tailwind CSS</div>
             </div>
-            <div>
-                <div class="my-5 items-center flex justify-center"><img src="./assets/React.png" alt=""
-                        class="w-auto h-[150px] "></div>
-                <div class="text-center font-bold my-5">React</div>
+            <div class="flex flex-col items-center">
+                <div class="my-3 md:my-5 flex justify-center items-center h-[100px] sm:h-[120px] md:h-[150px]">
+                    <img src="./assets/React.png" alt="React" class="w-auto h-full object-contain">
+                </div>
+                <div class="text-center font-bold text-sm sm:text-base md:text-lg">React</div>
             </div>
-            <div>
-                <div class="my-5 items-center flex justify-center"><img src="./assets/Python.png" alt=""
-                        class="w-auto h-[150px] "></div>
-                <div class="text-center font-bold my-5">Python</div>
+            <div class="flex flex-col items-center">
+                <div class="my-3 md:my-5 flex justify-center items-center h-[100px] sm:h-[120px] md:h-[150px]">
+                    <img src="./assets/Python.png" alt="Python" class="w-auto h-full object-contain">
+                </div>
+                <div class="text-center font-bold text-sm sm:text-base md:text-lg">Python</div>
             </div>
         </div>
     </section>
 
-    <section id="works" class="w-[90%] m-auto my-10">
-        <h1 class="text-3xl font-bold text-white underline text-center my-5">My Works</h1>
-        <div class="grid grid-cols-1 gap-10 sm:gap-10 md:gap-15 sm:grid-cols-2 md:grid-cols-4 my-5">
-            <div class="bg-white opacity-95 rounded-3xl px-5 py-3 text-xl items-center text-left gap-3 text-black">
-                <div class="mt-5 items-center flex justify-center"><img src="./assets/web-development.jpg" alt=""
-                        class="w-auto h-[150px] "></div>
-                <div class="text-center font-bold mt-5 text-xl">Project1 Title</div>
-                <div class="text-center mt-5 inline-flex gap-4 items-center justify-center">
-                    <div class="font-semibold text-lg underline">Tools:</div>
-                    <div class="text-sm">Html</div>
-                    <div class="text-sm">Tailwind Css</div>
-                    <div class="text-sm">React</div>
+    <section id="works" class="w-[90%] max-w-[1400px] m-auto py-8 md:py-12">
+        <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white underline text-center my-5 md:my-8">My Works</h1>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8 lg:gap-10 my-5 md:my-8">
+            <div class="bg-white opacity-95 rounded-3xl px-4 sm:px-5 py-4 sm:py-5 text-black flex flex-col">
+                <div class="mt-3 sm:mt-5 flex justify-center items-center h-[120px] sm:h-[150px]">
+                    <img src="./assets/web-development.jpg" alt="Project 1" class="w-auto h-full object-contain rounded-lg">
                 </div>
-                <div
-                    class="justify-center bg-black opacity-80 rounded-3xl px-5 py-3 text-xl items-center text-left flex gap-3 text-black mt-5">
-                    <button class="rounded-3xl bg-black text-white text-lg ">
+                <div class="text-center font-bold mt-4 sm:mt-5 text-lg sm:text-xl">Project1 Title</div>
+                <div class="text-center mt-3 sm:mt-5 flex flex-wrap gap-2 sm:gap-3 items-center justify-center">
+                    <div class="font-semibold text-base sm:text-lg underline">Tools:</div>
+                    <div class="text-xs sm:text-sm">Html</div>
+                    <div class="text-xs sm:text-sm">Tailwind Css</div>
+                    <div class="text-xs sm:text-sm">React</div>
+                </div>
+                <div class="justify-center bg-black opacity-80 rounded-3xl px-4 py-2 sm:px-5 sm:py-3 items-center flex mt-4 sm:mt-5">
+                    <button class="rounded-3xl bg-black text-white text-sm sm:text-base lg:text-lg hover:opacity-80 transition">
                         <a href="https://github.com/gauravsharansah" target="_blank">View Details</a>
                     </button>
                 </div>
             </div>
-            <div class="bg-white opacity-95 rounded-3xl px-5 py-3 text-xl items-center text-left gap-3 text-black">
-                <div class="mt-5 items-center flex justify-center"><img src="./assets/web-development.jpg" alt=""
-                        class="w-auto h-[150px] "></div>
-                <div class="text-center font-bold mt-5 text-xl">Project2 Title</div>
-                <div class="text-center mt-5 inline-flex gap-4 items-center justify-center">
-                    <div class="font-semibold text-lg underline">Tools:</div>
-                    <div class="text-base">Html</div>
-                    <div class="text-base">React</div>
-                    <div class="text-base">Python</div>
+            <div class="bg-white opacity-95 rounded-3xl px-4 sm:px-5 py-4 sm:py-5 text-black flex flex-col">
+                <div class="mt-3 sm:mt-5 flex justify-center items-center h-[120px] sm:h-[150px]">
+                    <img src="./assets/web-development.jpg" alt="Project 2" class="w-auto h-full object-contain rounded-lg">
                 </div>
-                <div
-                    class="justify-center bg-black opacity-80 rounded-3xl px-5 py-3 text-xl items-center text-left flex gap-3 text-black mt-5">
-                    <button class="rounded-3xl bg-black text-white text-lg ">
+                <div class="text-center font-bold mt-4 sm:mt-5 text-lg sm:text-xl">Project2 Title</div>
+                <div class="text-center mt-3 sm:mt-5 flex flex-wrap gap-2 sm:gap-3 items-center justify-center">
+                    <div class="font-semibold text-base sm:text-lg underline">Tools:</div>
+                    <div class="text-xs sm:text-sm">Html</div>
+                    <div class="text-xs sm:text-sm">React</div>
+                    <div class="text-xs sm:text-sm">Python</div>
+                </div>
+                <div class="justify-center bg-black opacity-80 rounded-3xl px-4 py-2 sm:px-5 sm:py-3 items-center flex mt-4 sm:mt-5">
+                    <button class="rounded-3xl bg-black text-white text-sm sm:text-base lg:text-lg hover:opacity-80 transition">
                         <a href="https://github.com/gauravsharansah" target="_blank">View Details</a>
                     </button>
                 </div>
             </div>
-            <div class="bg-white opacity-95 rounded-3xl px-5 py-3 text-xl items-center text-left gap-3 text-black">
-                <div class="mt-5 items-center flex justify-center"><img src="./assets/web-development.jpg" alt=""
-                        class="w-auto h-[150px] "></div>
-                <div class="text-center font-bold mt-5 text-xl">Project3 Title</div>
-                <div class="text-center mt-5 inline-flex gap-4 items-center justify-center">
-                    <div class="font-semibold text-lg underline">Tools:</div>
-                    <div class="text-base">Html</div>
-                    <div class="text-base">React</div>
-                    <div class="text-base">Vite</div>
+            <div class="bg-white opacity-95 rounded-3xl px-4 sm:px-5 py-4 sm:py-5 text-black flex flex-col">
+                <div class="mt-3 sm:mt-5 flex justify-center items-center h-[120px] sm:h-[150px]">
+                    <img src="./assets/web-development.jpg" alt="Project 3" class="w-auto h-full object-contain rounded-lg">
                 </div>
-                <div
-                    class="justify-center bg-black opacity-80 rounded-3xl px-5 py-3 text-xl items-center text-left flex gap-3 text-black mt-5">
-                    <button class="rounded-3xl bg-black text-white text-lg ">
+                <div class="text-center font-bold mt-4 sm:mt-5 text-lg sm:text-xl">Project3 Title</div>
+                <div class="text-center mt-3 sm:mt-5 flex flex-wrap gap-2 sm:gap-3 items-center justify-center">
+                    <div class="font-semibold text-base sm:text-lg underline">Tools:</div>
+                    <div class="text-xs sm:text-sm">Html</div>
+                    <div class="text-xs sm:text-sm">React</div>
+                    <div class="text-xs sm:text-sm">Vite</div>
+                </div>
+                <div class="justify-center bg-black opacity-80 rounded-3xl px-4 py-2 sm:px-5 sm:py-3 items-center flex mt-4 sm:mt-5">
+                    <button class="rounded-3xl bg-black text-white text-sm sm:text-base lg:text-lg hover:opacity-80 transition">
                         <a href="https://github.com/gauravsharansah" target="_blank">View Details</a>
                     </button>
                 </div>
             </div>
-            <div class="bg-white opacity-95 rounded-3xl px-5 py-3 text-xl items-center text-left gap-3 text-black">
-                <div class="mt-5 items-center flex justify-center"><img src="./assets/web-development.jpg" alt=""
-                        class="w-auto h-[150px] "></div>
-                <div class="text-center font-bold mt-5 text-xl">Project4 Title</div>
-                <div class="text-center mt-5 inline-flex gap-4 items-center justify-center">
-                    <div class="font-semibold text-lg underline">Tools:</div>
-                    <div class="text-base">Html</div>
-                    <div class="text-base">React</div>
-                    <div class="text-base">Python</div>
+            <div class="bg-white opacity-95 rounded-3xl px-4 sm:px-5 py-4 sm:py-5 text-black flex flex-col">
+                <div class="mt-3 sm:mt-5 flex justify-center items-center h-[120px] sm:h-[150px]">
+                    <img src="./assets/web-development.jpg" alt="Project 4" class="w-auto h-full object-contain rounded-lg">
                 </div>
-                <div
-                    class="justify-center bg-black opacity-80 rounded-3xl px-5 py-3 text-xl items-center text-left flex gap-3 text-black mt-5">
-                    <button class="rounded-3xl bg-black text-white text-lg ">
+                <div class="text-center font-bold mt-4 sm:mt-5 text-lg sm:text-xl">Project4 Title</div>
+                <div class="text-center mt-3 sm:mt-5 flex flex-wrap gap-2 sm:gap-3 items-center justify-center">
+                    <div class="font-semibold text-base sm:text-lg underline">Tools:</div>
+                    <div class="text-xs sm:text-sm">Html</div>
+                    <div class="text-xs sm:text-sm">React</div>
+                    <div class="text-xs sm:text-sm">Python</div>
+                </div>
+                <div class="justify-center bg-black opacity-80 rounded-3xl px-4 py-2 sm:px-5 sm:py-3 items-center flex mt-4 sm:mt-5">
+                    <button class="rounded-3xl bg-black text-white text-sm sm:text-base lg:text-lg hover:opacity-80 transition">
                         <a href="https://github.com/gauravsharansah" target="_blank">View Details</a>
                     </button>
                 </div>
@@ -222,62 +205,49 @@
         </div>
     </section>
 
-    <section id="contact" class="w-[90%] m-auto my-10">
-        <h1 class="text-3xl font-bold text-white underline text-center my-5">Contact Me</h1>
-        <div class="grid grid-cols-1 gap-10 md:gap-30 md:grid-cols-2 m-auto items-center justify-center my-5">
-            <div class="bg-white opacity-80 rounded-3xl px-5 py-3 text-xl items-center text-left flex gap-3 text-black">
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=gauravsharansah01@gmail.com" target="_blank"
-                    class="inline-flex"><img src="./assets/envelope.svg" alt=""
-                        class="w-8 h-8 items-center">&nbsp;gauravsharansah01@gmail.com</a>
-            </div>
-            <div class="bg-white opacity-80 rounded-3xl px-5 py-3 text-xl items-center text-left flex gap-3 text-black">
-                <a href="https://wa.me/9779709409631" target="_blank" class="inline-flex"><img
-                        src="./assets/whatsapp.svg" alt="" class="w-8 h-8 items-center">&nbsp;+977 9709409631</a>
-            </div>
-            <div class="bg-white opacity-80 rounded-3xl px-5 py-3 text-xl items-center text-left flex gap-3 text-black">
-                <a href="https://github.com/gauravsharansah" target="_blank" class="inline-flex"><img
-                        src="./assets/github.svg" alt="" class="w-8 h-8 items-center">&nbsp;gauravsharansah</a>
-            </div>
-            <div class="bg-white opacity-80 rounded-3xl px-5 py-3 text-xl items-center text-left flex gap-3 text-black">
-                <a href="https://www.facebook.com/gauravsharan.sah.5" target="_blank" class="inline-flex"><img
-                        src="./assets/facebook.svg" alt="" class="w-8 h-8 items-center">&nbsp;Gaurav Sharan Sah</a>
-            </div>
-            <div class="bg-white opacity-80 rounded-3xl px-5 py-3 text-xl items-center text-left flex gap-3 text-black">
-                <a href="https://x.com/GauravSah01" target="_blank" class="inline-flex"><img src="./assets/twitter.svg"
-                        alt="" class="w-8 h-8 items-center">&nbsp;GauravSah01</a>
-            </div>
-            <div class="bg-white opacity-80 rounded-3xl px-5 py-3 text-xl items-center text-left flex gap-3 text-black">
-                <a href="https://www.linkedin.com/in/gaurav-sharan-kumar" target="_blank" class="inline-flex"><img
-                        src="./assets/linkedin.svg" alt="" class="w-8 h-8 items-center">&nbsp;Gaurav Sharan Kumar</a>
-            </div>
+    <section id="contact" class="w-[90%] max-w-[1400px] m-auto py-8 md:py-12">
+        <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white underline text-center my-5 md:my-8">Contact Me</h1>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 lg:gap-8 m-auto my-5 md:my-8">
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=gauravsharansah01@gmail.com" target="_blank" class="bg-white opacity-80 rounded-3xl px-4 py-3 md:px-5 md:py-4 flex items-center gap-3 text-black hover:opacity-100 transition">
+                <img src="./assets/envelope.svg" alt="Email" class="w-6 h-6 md:w-8 md:h-8 flex-shrink-0">
+                <span class="text-sm sm:text-base md:text-lg lg:text-xl break-all">gauravsharansah01@gmail.com</span>
+            </a>
+            <a href="https://wa.me/9779709409631" target="_blank" class="bg-white opacity-80 rounded-3xl px-4 py-3 md:px-5 md:py-4 flex items-center gap-3 text-black hover:opacity-100 transition">
+                <img src="./assets/whatsapp.svg" alt="WhatsApp" class="w-6 h-6 md:w-8 md:h-8 flex-shrink-0">
+                <span class="text-sm sm:text-base md:text-lg lg:text-xl">+977 9709409631</span>
+            </a>
+            <a href="https://github.com/gauravsharansah" target="_blank" class="bg-white opacity-80 rounded-3xl px-4 py-3 md:px-5 md:py-4 flex items-center gap-3 text-black hover:opacity-100 transition">
+                <img src="./assets/github.svg" alt="GitHub" class="w-6 h-6 md:w-8 md:h-8 flex-shrink-0">
+                <span class="text-sm sm:text-base md:text-lg lg:text-xl">gauravsharansah</span>
+            </a>
+            <a href="https://www.facebook.com/gauravsharan.sah.5" target="_blank" class="bg-white opacity-80 rounded-3xl px-4 py-3 md:px-5 md:py-4 flex items-center gap-3 text-black hover:opacity-100 transition">
+                <img src="./assets/facebook.svg" alt="Facebook" class="w-6 h-6 md:w-8 md:h-8 flex-shrink-0">
+                <span class="text-sm sm:text-base md:text-lg lg:text-xl">Gaurav Sharan Sah</span>
+            </a>
+            <a href="https://x.com/GauravSah01" target="_blank" class="bg-white opacity-80 rounded-3xl px-4 py-3 md:px-5 md:py-4 flex items-center gap-3 text-black hover:opacity-100 transition">
+                <img src="./assets/twitter.svg" alt="Twitter" class="w-6 h-6 md:w-8 md:h-8 flex-shrink-0">
+                <span class="text-sm sm:text-base md:text-lg lg:text-xl">GauravSah01</span>
+            </a>
+            <a href="https://www.linkedin.com/in/gaurav-sharan-kumar" target="_blank" class="bg-white opacity-80 rounded-3xl px-4 py-3 md:px-5 md:py-4 flex items-center gap-3 text-black hover:opacity-100 transition">
+                <img src="./assets/linkedin.svg" alt="LinkedIn" class="w-6 h-6 md:w-8 md:h-8 flex-shrink-0">
+                <span class="text-sm sm:text-base md:text-lg lg:text-xl">Gaurav Sharan Kumar</span>
+            </a>
         </div>
-        <div class="grid grid-cols-2 gap-10 md:gap-30 md:grid-cols-2 m-auto items-center justify-center my-5">
-            <div
-                class="justify-self-end bg-white opacity-80 rounded-3xl px-5 py-3 text-xl items-center text-left flex gap-3 text-black">
-                <a href="/assests/Gaurav CV.pdf" download target="_blank"
-                    class="inline-flex items-center gap-2 text-black rounded">
-                    Download my CV
-                </a>
-            </div>
-            <div
-                class="justify-self-start bg-white opacity-80 rounded-3xl px-5 py-3 text-xl items-center text-left flex gap-3 text-black">
-                <button class="rounded-3xl bg-white text-black text-lg "><a
-                        href="https://www.upwork.com/freelancers/~0105569a5104fde3f7" target="_blank">Find on
-                        Upwork</a></button>
-            </div>
+        <div class="flex flex-col sm:flex-row gap-4 md:gap-6 items-center justify-center my-5 md:my-8">
+            <a href="/assests/Gaurav CV.pdf" download target="_blank" class="bg-white opacity-80 rounded-3xl px-4 py-3 md:px-5 md:py-4 flex items-center justify-center gap-3 text-black hover:opacity-100 transition">
+                <span class="text-sm sm:text-base md:text-lg lg:text-xl whitespace-nowrap">Download my CV</span>
+            </a>
+            <a href="https://www.upwork.com/freelancers/~0105569a5104fde3f7" target="_blank" class="bg-white opacity-80 rounded-3xl px-4 py-3 md:px-5 md:py-4 flex items-center justify-center gap-3 text-black hover:opacity-100 transition">
+                <span class="text-sm sm:text-base md:text-lg lg:text-xl whitespace-nowrap">Find on Upwork</span>
+            </a>
         </div>
     </section>
-
 
     <footer>
-        <div class="w-full  bg-white flex justify-center items-center">
-            <div class="text-black text-center max-sm:text-sm ">
+        <div class="w-full bg-white flex justify-center items-center py-4 md:py-6">
+            <div class="text-black text-center text-xs sm:text-sm md:text-base px-4">
                 &copy; 2026 Gaurav Sharan Sah. All rights reserved.
             </div>
-            <!-- <a href="https://mail.google.com/mail/?view=cm&fs=1&to=gauravsharansah01@gmail.com"><img src="./assets/envelope.svg" alt="" class="w-8 h-8 items-center"></a>
-            <a href="https://github.com/gauravsharansah"><img src="./assets/github.svg" alt="" class="w-8 h-8 items-center"></a>
-            <a href="https://wa.me/9779709409631"><img src="./assets/whatsapp.svg" alt="" class="w-8 h-8 items-center"></a>
-            <a href="https://www.facebook.com/gauravsharan.sah.5"><img src="./assets/facebook.svg" alt="" class="w-8 h-8 items-center"></a> -->
         </div>
     </footer>
 </body>
@@ -290,6 +260,14 @@
             menu.classList.add('hidden');
         }
     }
+
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.add('hidden');
+        });
+    });
 </script>
 
 </html>
