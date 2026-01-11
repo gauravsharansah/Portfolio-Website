@@ -9,11 +9,13 @@
     <title>Gaurav Sharan Sah</title>
     <link rel="icon" href="/favicon.jpg" type="image/png">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon.svg">
 
 </head>
 
 <body class="bg-[#0f0f0f] min-h-screen text-white">
-    <header class="w-full h-[16vh] flex min-h-[60px] md:min-h-[95px]">
+    <header id="home" class="w-full h-[16vh] flex min-h-[60px] md:min-h-[95px]">
         <div class="w-[90%] h-[80%] m-auto flex justify-between items-center sm:w-[40%] md:w-[45%] lg:w-[50%] ml-[5%]">
             <div
                 class="font-['Metal-Mania'] font-bold text-3xl underline decoration-white/60 hover:decoration-white/90">
@@ -25,10 +27,11 @@
             </div>
             <div id="mobile-menu"
                 class="hidden sm:hidden fixed top-[max(30px,8vh)] right-[4%] w-auto h-auto bg-[#0f0f0f] flex flex-col justify-center items-center gap-3">
-                <a href="#" class="hover:opacity-70">HOME</a>
-                <a href="#" class="hover:opacity-70">ABOUT</a>
-                <a href="#" class="hover:opacity-70">WORKS</a>
-                <a href="#"><button class="bg-black font-semibold p-2 text-white rounded-full">CONTACT ME</button></a>
+                <a href="#home" class="hover:opacity-70">HOME</a>
+                <a href="#about" class="hover:opacity-70">ABOUT</a>
+                <a href="#works" class="hover:opacity-70">WORKS</a>
+                <a href="#contact"><button class="bg-black font-semibold p-2 text-white rounded-full">CONTACT
+                        ME</button></a>
             </div>
         </div>
 
@@ -36,15 +39,15 @@
             <div
                 class="h-[60%] mt-[3%] flex justify-between text-black gap-8 items-center md:text-base xl:text-lg ml-[10%] mr-[10%] xl:ml-[15%] sm:ml-[5%] sm:mr-[5%] sm:text-sm">
                 <div class="flex justify-center gap-5 items-center font-normal lg:gap-10 ">
-                    <a href="#" class="hover:opacity-70">HOME</a>
-                    <a href="#" class="hover:opacity-70">ABOUT</a>
-                    <a href="#" class="hover:opacity-70">WORKS</a>
+                    <a href="#home" class="hover:opacity-70">HOME</a>
+                    <a href="#about" class="hover:opacity-70">ABOUT</a>
+                    <a href="#works" class="hover:opacity-70">WORKS</a>
                 </div>
-                <button
-                    class="bg-black p-3 font-medium xl:font-semibold text-white rounded-full xl:hidden">CONTACT</button>
-                <button
-                    class="bg-black p-3 font-medium xl:font-semibold text-white rounded-full hidden xl:block">CONTACT
-                    ME</button>
+                <a href="#contact"><button
+                        class="bg-black p-3 font-medium xl:font-semibold text-white rounded-full xl:hidden">CONTACT</button></a>
+                <a href="#contact"><button
+                        class="bg-black p-3 font-medium xl:font-semibold text-white rounded-full hidden xl:block">CONTACT
+                        ME</button></a>
             </div>
         </nav>
     </header>
@@ -62,9 +65,9 @@
                 websites.
             </div>
             <div class="grid grid-cols-1 gap-15 items-center m-auto">
-                <a href="#"><button class="bg-white text-black px-6 py-2 rounded-full my-5">see my
+                <a href="#works"><button class="bg-white text-black px-6 py-2 rounded-full my-5">see my
                         works</button></a><br>
-                <a href="#" class="text-white underline mb-5 inline-block">learn more about me</a>
+                <a href="#about" class="text-white underline mb-5 inline-block">learn more about me</a>
             </div>
         </div>
         <div id="hero-rectangles" class="hidden md:block md:w-[50%] mr-0">
@@ -88,8 +91,7 @@
     <section id="about" class="w-[90%] m-auto">
 
         <div class="flex justify-center m-auto my-5">
-            <img src="./assets/gsk.jpg" alt="photo"
-                class="items-center  h-auto lg:w-[300px] lg:h-[300px] rounded-full">
+            <img src="./assets/gsk.jpg" alt="photo" class="items-center  h-auto lg:w-[300px] lg:h-[300px] rounded-full">
         </div>
         <h1 class="text-3xl font-bold text-white underline text-center my-5">About Me</h1>
         <div class="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-20 my-5">
@@ -243,6 +245,3 @@
 </script>
 
 </html>
-
-
-
